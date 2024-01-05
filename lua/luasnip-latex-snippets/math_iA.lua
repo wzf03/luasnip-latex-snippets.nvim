@@ -115,7 +115,7 @@ function M.retrieve(is_math)
     parse_snippet({ trig = "...", name = "ldots", priority = 100 }, "\\ldots "),
     parse_snippet({ trig = "!>", name = "mapsto" }, "\\mapsto "),
     parse_snippet({ trig = "iff", name = "iff" }, "\\iff"),
-    parse_snippet({ trig = "siff", name = "short iff", priority = 100}, "\\Leftrightarrow"),
+    parse_snippet({ trig = "siff", name = "short iff", priority = 100 }, "\\Leftrightarrow"),
     parse_snippet({ trig = "ooo", name = "\\infty" }, "\\infty"),
     parse_snippet({ trig = "rij", name = "mrij" }, "(${1:x}_${2:n})_{${3:$2}\\in${4:\\N}}$0"),
     parse_snippet({ trig = "nabl", name = "nabla" }, "\\nabla "),
@@ -148,7 +148,7 @@ function M.retrieve(is_math)
       "\\begin{pmatrix} ${1:x}_${2:1}\\\\ \\vdots\\\\ $1_${2:n} \\end{pmatrix}"
     ),
     parse_snippet({ trig = "ceil", name = "ceil" }, "\\left\\lceil $1 \\right\\rceil $0"),
-    parse_snippet({ trig = "OO", name = "emptyset" }, "\\O"),
+    parse_snippet({ trig = "OO", name = "emptyset" }, "\\empty"),
     parse_snippet({ trig = "RR", name = "R" }, "\\mathbb{R}"),
     parse_snippet({ trig = "QQ", name = "Q" }, "\\mathbb{Q}"),
     parse_snippet({ trig = "ZZ", name = "Z" }, "\\mathbb{Z}"),

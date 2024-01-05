@@ -131,14 +131,18 @@ M.setup_markdown = function()
   }
   vim.list_extend(filtered, normal_wA_tex)
 
+  local math_i = require("luasnip-latex-snippets/math_i").retrieve(is_math)
+
+  ls.add_snippets("markdown", math_i, { default_priority = 0 })
+
   ls.add_snippets("markdown", filtered, {
     type = "autosnippets",
     default_priority = 0,
   })
 end
 
-M.inspect_node = function(lang)
-  local node = require("luasnip-latex-snippets.util.ts_utils").get_node_at_cursor(lang)
+M.inspect_node = function()
+  local node = vim.treesitter.get_node({ ignore_injections = false })
   while node do
     print(node:type())
     node = node:parent()

@@ -64,9 +64,11 @@ function M.in_mathzone_tex()
 end
 
 function M.in_mathzone_md()
-  local node = M.get_node_at_cursor("markdown_inline")
+  local node = vim.treesitter.get_node({ ignore_injections = false })
   while node do
-    if node:type() == "latex_block" then
+    if TEXT_NODES[node:type()] then
+      return false
+    elseif MATH_NODES[node:type()] then
       return true
     end
     node = node:parent()
