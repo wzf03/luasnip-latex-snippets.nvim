@@ -4,8 +4,6 @@ A set of preconfigured snippets for LaTeX for the snippet engine [LuaSnip](https
 
 > ⚠️ **Note**: My implementation is based on [VimTeX](https://github.com/lervag/vimtex) for a portion of the functionality; see the acknowledgements section for alternatives if VimTeX is not an option. I'm also hoping to adopt treesitter support later on, as mentioned a while ago in [this issue](https://github.com/evesdropper/luasnip-latex-snippets.nvim/issues/1).
 
-https://github.com/evesdropper/luasnip-latex-snippets.nvim/assets/82856360/8649e3ea-ea81-4f80-aa28-dc9c51cd4642
-
 ## Idea
 I’ve created my share of smart snippets for LaTeX, and it might be nice to provide some solid defaults for people using snippets out of the box. Despite this, I would probably recommend others to make their own snippets if they can as the process is far more enjoyable and rewarding. But someone can tell me the same about creating a Neovim plugin while I’m sorely tempted to pay someone off to do the work for me because I really can’t deal with the development process, so do what makes you happy, I guess.
 
