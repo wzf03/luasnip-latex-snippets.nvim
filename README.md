@@ -15,14 +15,8 @@ Use the package manager of your choice, or don't.
 **Lazy.nvim**
 ```lua
 {
-    "evesdropper/luasnip-latex-snippets.nvim",
-},
-```
-
-**Packer.nvim**
-```lua
-use {
-    "evesdropper/luasnip-latex-snippets.nvim",
+    "wzf03/luasnip-latex-snippets.nvim",
+    branch = "evesdropper"
 },
 ```
 

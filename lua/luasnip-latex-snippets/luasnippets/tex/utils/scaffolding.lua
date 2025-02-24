@@ -34,7 +34,7 @@ local generate_postfix_dynamicnode = function(_, parent, _, user_arg1, user_arg2
 end
 
 -- visual util to add insert node - thanks ejmastnak!
-M.get_visual = function(args, parent)
+M.get_visual = function(_, parent)
   if #parent.snippet.env.SELECT_RAW > 0 then
     return sn(nil, i(1, parent.snippet.env.SELECT_RAW))
   else -- If SELECT_RAW is empty, return a blank insert node
@@ -74,7 +74,7 @@ M.symbol_snippet = function(context, command, opts)
   context.name = context.name or command:gsub([[\]], "")
   context.docstring = context.docstring or (command .. [[{0}]])
   context.wordTrig = context.wordTrig or false
-  j, _ = string.find(command, context.trig)
+  local j, _ = string.find(command, context.trig)
   if j == 2 then -- command always starts with backslash
     context.trigEngine = "ecma"
     context.trig = "(?<!\\\\)" .. "(" .. context.trig .. ")"
@@ -114,7 +114,7 @@ M.single_command_snippet = function(context, command, opts, ext)
         ) })
   end
   context.docstring = context.docstring or (command .. docstring)
-  j, _ = string.find(command, context.trig)
+  local j, _ = string.find(command, context.trig)
   if j == 2 then
     context.trigEngine = "ecma"
     context.trig = "(?<!\\\\)" .. "(" .. context.trig .. ")"
@@ -140,7 +140,7 @@ M.postfix_snippet = function(context, command, opts)
   context.name = context.name or context.dscr
   context.docstring = command.pre .. [[(POSTFIX_MATCH|VISUAL|<1>)]] .. command.post
   context.match_pattern = [[[%w%.%_%-%"%']*$]]
-  j, _ = string.find(command.pre, context.trig)
+  local j, _ = string.find(command.pre, context.trig)
   if j == 2 then
     context.trigEngine = "ecma"
     context.trig = "(?<!\\\\)" .. "(" .. context.trig .. ")"

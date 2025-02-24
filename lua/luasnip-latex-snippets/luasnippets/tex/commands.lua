@@ -15,11 +15,11 @@ local tex = require("luasnip-latex-snippets.luasnippets.tex.utils.conditions")
 local single_command_snippet = require("luasnip-latex-snippets.luasnippets.tex.utils.scaffolding")
 .single_command_snippet
 local reference_snippet_table = {
-  a = "auto",
-  c = "c",
-  C = "C",
-  e = "eq",
-  r = ""
+  ["a"] = "auto",
+  ["c"] = "c",
+  ["C"] = "C",
+  ["e"] = "eq",
+  ["r"] = ""
 }
 
 M = {
@@ -43,7 +43,7 @@ M = {
 }
 
 local single_command_specs = {
-  sec = {
+  ["sec"] = {
     context = {
       name = "section",
       dscr = "section",
@@ -52,7 +52,7 @@ local single_command_specs = {
     command = [[\section]],
     ext = { label = true, short = "sec" },
   },
-  ssec = {
+  ["ssec"] = {
     context = {
       name = "subsection",
       dscr = "subsection",
@@ -61,7 +61,7 @@ local single_command_specs = {
     command = [[\subsection]],
     ext = { label = true, short = "subsec" },
   },
-  sssec = {
+  ["sssec"] = {
     context = {
       name = "subsubsection",
       dscr = "subsubsection",
@@ -96,21 +96,21 @@ local single_command_specs = {
     ext = { label = true, short = "sssec" },
   },
 
-  sq = { -- requires csquotes!
+  ["sq"] = { -- requires csquotes!
     context = {
       name = "enquote*",
       dscr = "single quotes",
     },
     command = [[\enquote*]],
   },
-  qq = {
+  ["qq"] = {
     context = {
       name = "enquote",
       dscr = "double quotes",
     },
     command = [[\enquote]],
   },
-  bf = {
+  ["bf"] = {
     context = {
       name = "textbf",
       dscr = "bold text",
@@ -118,7 +118,7 @@ local single_command_specs = {
     },
     command = [[\textbf]],
   },
-  it = {
+  ["it"] = {
     context = {
       name = "textit",
       dscr = "italic text",
@@ -126,7 +126,7 @@ local single_command_specs = {
     },
     command = [[\textit]],
   },
-  ttt = {
+  ["ttt"] = {
     context = {
       name = "texttt",
       dscr = "monospace text",
@@ -135,7 +135,7 @@ local single_command_specs = {
     command = [[\texttt]],
   },
 
-  sc = {
+  ["sc"] = {
     context = {
       name = "textsc",
       dscr = "small caps",
@@ -143,7 +143,7 @@ local single_command_specs = {
     },
     command = [[\textsc]],
   },
-  tu = {
+  ["tu"] = {
     context = {
       name = "underline (text)",
       dscr = "underlined text in non-math mode",
@@ -151,7 +151,7 @@ local single_command_specs = {
     },
     command = [[\underline]],
   },
-  tov = {
+  ["tov"] = {
     context = {
       name = "overline (text)",
       dscr = "overline text in non-math mode",
@@ -159,7 +159,7 @@ local single_command_specs = {
     },
     command = [[\overline]],
   },
-  bct = {
+  ["bct"] = {
     context = {
       name = "cite",
       dscr = "bibtex cite",

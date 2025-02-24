@@ -17,13 +17,13 @@ local scaffolding = require("luasnip-latex-snippets.luasnippets.tex.utils.scaffo
 
 -- brackets
 local brackets = {
-  a = { "\\langle", "\\rangle" },
-  A = { "Angle", "Angle" },
-  b = { "brack", "brack" },
-  B = { "Brack", "Brack" },
-  c = { "brace", "brace" },
-  m = { "|", "|" },
-  p = { "(", ")" },
+  ["a"] = { "\\langle", "\\rangle" },
+  ["A"] = { "Angle", "Angle" },
+  ["b"] = { "brack", "brack" },
+  ["B"] = { "Brack", "Brack" },
+  ["c"] = { "brace", "brace" },
+  ["m"] = { "|", "|" },
+  ["p"] = { "(", ")" },
 }
 
 M = {

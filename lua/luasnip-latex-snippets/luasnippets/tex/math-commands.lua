@@ -194,37 +194,37 @@ vim.list_extend(M, auto_backslash_snippets)
 
 -- Symbols/Commands
 local greek_specs = {
-  alpha = { context = { name = "α" }, command = [[\alpha]] },
-  beta = { context = { name = "β" }, command = [[\beta]] },
-  gam = { context = { name = "γ" }, command = [[\gamma]] },
-  Gam = { context = { name = "Γ" }, command = [[\Gamma]] },
-  delta = { context = { name = "δ" }, command = [[\delta]] },
-  DD = { context = { name = "Δ" }, command = [[\Delta]] },
-  eps = { context = { name = "ε", priority = 500 }, command = [[\epsilon]] },
-  veps = { context = { name = "ε" }, command = [[\varepsilon]] },
-  zeta = { context = { name = "ζ" }, command = [[\zeta]] },
-  eta = { context = { name = "η", priority = 500 }, command = [[\eta]] },
-  theta = { context = { name = "θ" }, command = [[\theta]] },
-  Theta = { context = { name = "Θ" }, command = [[\Theta]] },
-  iota = { context = { name = "ι" }, command = [[\iota]] },
-  kappa = { context = { name = "κ" }, command = [[\kappa]] },
-  lmbd = { context = { name = "λ" }, command = [[\lambda]] },
-  Lmbd = { context = { name = "Λ" }, command = [[\Lambda]] },
-  mu = { context = { name = "μ" }, command = [[\mu]] },
-  nu = { context = { name = "ν" }, command = [[\nu]] },
-  xi = { context = { name = "ξ" }, command = [[\xi]] },
-  pi = { context = { name = "π" }, command = [[\pi]] },
-  rho = { context = { name = "ρ" }, command = [[\rho]] },
-  sig = { context = { name = "σ" }, command = [[\sigma]] },
-  Sig = { context = { name = "Σ" }, command = [[\Sigma]] },
-  tau = { context = { name = "τ" }, command = [[\tau]] },
-  ups = { context = { name = "υ" }, command = [[\upsilon]] },
-  phi = { context = { name = "φ" }, command = [[\phi]] },
-  vphi = { context = { name = "φ" }, command = [[\varphi]] },
-  chi = { context = { name = "χ" }, command = [[\chi]] },
-  psi = { context = { name = "Ψ" }, command = [[\psi]] },
-  omega = { context = { name = "ω" }, command = [[\omega]] },
-  Omega = { context = { name = "Ω" }, command = [[\Omega]] },
+  ["alpha"] = { context = { name = "α" }, command = [[\alpha]] },
+  ["beta"] = { context = { name = "β" }, command = [[\beta]] },
+  ["gam"] = { context = { name = "γ" }, command = [[\gamma]] },
+  ["Gam"] = { context = { name = "Γ" }, command = [[\Gamma]] },
+  ["delta"] = { context = { name = "δ" }, command = [[\delta]] },
+  ["DD"] = { context = { name = "Δ" }, command = [[\Delta]] },
+  ["eps"] = { context = { name = "ε", priority = 500 }, command = [[\epsilon]] },
+  ["veps"] = { context = { name = "ε" }, command = [[\varepsilon]] },
+  ["zeta"] = { context = { name = "ζ" }, command = [[\zeta]] },
+  ["eta"] = { context = { name = "η", priority = 500 }, command = [[\eta]] },
+  ["theta"] = { context = { name = "θ" }, command = [[\theta]] },
+  ["Theta"] = { context = { name = "Θ" }, command = [[\Theta]] },
+  ["iota"] = { context = { name = "ι" }, command = [[\iota]] },
+  ["kappa"] = { context = { name = "κ" }, command = [[\kappa]] },
+  ["lmbd"] = { context = { name = "λ" }, command = [[\lambda]] },
+  ["Lmbd"] = { context = { name = "Λ" }, command = [[\Lambda]] },
+  ["mu"] = { context = { name = "μ" }, command = [[\mu]] },
+  ["nu"] = { context = { name = "ν" }, command = [[\nu]] },
+  ["xi"] = { context = { name = "ξ" }, command = [[\xi]] },
+  ["pi"] = { context = { name = "π" }, command = [[\pi]] },
+  ["rho"] = { context = { name = "ρ" }, command = [[\rho]] },
+  ["sig"] = { context = { name = "σ" }, command = [[\sigma]] },
+  ["Sig"] = { context = { name = "Σ" }, command = [[\Sigma]] },
+  ["tau"] = { context = { name = "τ" }, command = [[\tau]] },
+  ["ups"] = { context = { name = "υ" }, command = [[\upsilon]] },
+  ["phi"] = { context = { name = "φ" }, command = [[\phi]] },
+  ["vphi"] = { context = { name = "φ" }, command = [[\varphi]] },
+  ["chi"] = { context = { name = "χ" }, command = [[\chi]] },
+  ["psi"] = { context = { name = "Ψ" }, command = [[\psi]] },
+  ["omega"] = { context = { name = "ω" }, command = [[\omega]] },
+  ["Omega"] = { context = { name = "Ω" }, command = [[\Omega]] },
 }
 
 local greek_snippets = {}
@@ -252,52 +252,52 @@ local symbol_specs = {
   ["=~"] = { context = { name = "≅" }, command = [[\cong]] },
   [":="] = { context = { name = "≔" }, command = [[\definedas]] },
   ["**"] = { context = { name = "·", priority = 100 }, command = [[\cdot]] },
-  xx = { context = { name = "×" }, command = [[\times]] },
+  ["xx"] = { context = { name = "×" }, command = [[\times]] },
   ["!+"] = { context = { name = "⊕" }, command = [[\oplus]] },
   ["!*"] = { context = { name = "⊗" }, command = [[\otimes]] },
   -- sets
-  NN = { context = { name = "ℕ" }, command = [[\mathbb{N}]] },
-  ZZ = { context = { name = "ℤ" }, command = [[\mathbb{Z}]] },
-  QQ = { context = { name = "ℚ" }, command = [[\mathbb{Q}]] },
-  RR = { context = { name = "ℝ" }, command = [[\mathbb{R}]] },
-  CC = { context = { name = "ℂ" }, command = [[\mathbb{C}]] },
-  OO = { context = { name = "∅" }, command = [[\emptyset]] },
-  pwr = { context = { name = "P" }, command = [[\powerset]] },
-  cc = { context = { name = "⊂" }, command = [[\subset]] },
-  cq = { context = { name = "⊆" }, command = [[\subseteq]] },
-  qq = { context = { name = "⊃" }, command = [[\supset]] },
-  qc = { context = { name = "⊇" }, command = [[\supseteq]] },
+  ["NN"] = { context = { name = "ℕ" }, command = [[\mathbb{N}]] },
+  ["ZZ"] = { context = { name = "ℤ" }, command = [[\mathbb{Z}]] },
+  ["QQ"] = { context = { name = "ℚ" }, command = [[\mathbb{Q}]] },
+  ["RR"] = { context = { name = "ℝ" }, command = [[\mathbb{R}]] },
+  ["CC"] = { context = { name = "ℂ" }, command = [[\mathbb{C}]] },
+  ["OO"] = { context = { name = "∅" }, command = [[\emptyset]] },
+  ["pwr"] = { context = { name = "P" }, command = [[\powerset]] },
+  ["cc"] = { context = { name = "⊂" }, command = [[\subset]] },
+  ["cq"] = { context = { name = "⊆" }, command = [[\subseteq]] },
+  ["qq"] = { context = { name = "⊃" }, command = [[\supset]] },
+  ["qc"] = { context = { name = "⊇" }, command = [[\supseteq]] },
   ["\\\\\\"] = { context = { name = "⧵" }, command = [[\setminus]] },
-  Nn = { context = { name = "∩" }, command = [[\cap]] },
-  UU = { context = { name = "∪" }, command = [[\cup]] },
+  ["Nn"] = { context = { name = "∩" }, command = [[\cap]] },
+  ["UU"] = { context = { name = "∪" }, command = [[\cup]] },
   ["::"] = { context = { name = ":" }, command = [[\colon]] },
   -- quantifiers and logic stuffs
-  AA = { context = { name = "∀" }, command = [[\forall]] },
-  EE = { context = { name = "∃" }, command = [[\exists]] },
-  inn = { context = { name = "∈" }, command = [[\in]] },
-  notin = { context = { name = "∉" }, command = [[\not\in]] },
+  ["AA"] = { context = { name = "∀" }, command = [[\forall]] },
+  ["EE"] = { context = { name = "∃" }, command = [[\exists]] },
+  ["inn"] = { context = { name = "∈" }, command = [[\in]] },
+  ["notin"] = { context = { name = "∉" }, command = [[\not\in]] },
   ["!-"] = { context = { name = "¬" }, command = [[\lnot]] },
-  VV = { context = { name = "∨" }, command = [[\lor]] },
-  WW = { context = { name = "∧" }, command = [[\land]] },
+  ["VV"] = { context = { name = "∨" }, command = [[\lor]] },
+  ["WW"] = { context = { name = "∧" }, command = [[\land]] },
   ["!W"] = { context = { name = "∧" }, command = [[\bigwedge]] },
   ["=>"] = { context = { name = "⇒" }, command = [[\implies]] },
   ["=<"] = { context = { name = "⇐" }, command = [[\impliedby]] },
-  iff = { context = { name = "⟺" }, command = [[\iff]] },
+  ["iff"] = { context = { name = "⟺" }, command = [[\iff]] },
   ["->"] = { context = { name = "→", priority = 250 }, command = [[\to]] },
   ["!>"] = { context = { name = "↦" }, command = [[\mapsto]] },
   ["<-"] = { context = { name = "↦", priority = 250 }, command = [[\gets]] },
   -- differentials
-  dp = { context = { name = "⇐" }, command = [[\partial]] },
+  ["dp"] = { context = { name = "⇐" }, command = [[\partial]] },
   -- arrows
   ["-->"] = { context = { name = "⟶", priority = 500 }, command = [[\longrightarrow]] },
   ["<->"] = { context = { name = "↔", priority = 500 }, command = [[\leftrightarrow]] },
   ["2>"] = { context = { name = "⇉", priority = 400 }, command = [[\rightrightarrows]] },
-  upar = { context = { name = "↑" }, command = [[\uparrow]] },
-  dnar = { context = { name = "↓" }, command = [[\downarrow]] },
+  ["upar"] = { context = { name = "↑" }, command = [[\uparrow]] },
+  ["dnar"] = { context = { name = "↓" }, command = [[\downarrow]] },
   -- etc
-  ooo = { context = { name = "∞" }, command = [[\infty]] },
-  lll = { context = { name = "ℓ" }, command = [[\ell]] },
-  dag = { context = { name = "†" }, command = [[\dagger]] },
+  ["ooo"] = { context = { name = "∞" }, command = [[\infty]] },
+  ["lll"] = { context = { name = "ℓ" }, command = [[\ell]] },
+  ["dag"] = { context = { name = "†" }, command = [[\dagger]] },
   ["+-"] = { context = { name = "†" }, command = [[\pm]] },
   ["-+"] = { context = { name = "†" }, command = [[\mp]] },
 }
@@ -402,7 +402,7 @@ end
 vim.list_extend(M, single_command_math_snippets)
 
 local postfix_math_specs = {
-  mbb = {
+  ["mbb"] = {
     context = {
       name = "mathbb",
       dscr = "math blackboard bold",
@@ -412,7 +412,7 @@ local postfix_math_specs = {
       post = [[}]],
     }
   },
-  mcal = {
+  ["mcal"] = {
     context = {
       name = "mathcal",
       dscr = "math calligraphic",
@@ -422,7 +422,7 @@ local postfix_math_specs = {
       post = [[}]],
     }
   },
-  mscr = {
+  ["mscr"] = {
     context = {
       name = "mathscr",
       dscr = "math script",
@@ -432,7 +432,7 @@ local postfix_math_specs = {
       post = [[}]],
     },
   },
-  mfr = {
+  ["mfr"] = {
     context = {
       name = "mathfrak",
       dscr = "mathfrak",
@@ -442,7 +442,7 @@ local postfix_math_specs = {
       post = [[}]],
     },
   },
-  hat = {
+  ["hat"] = {
     context = {
       name = "hat",
       dscr = "hat",
@@ -452,7 +452,7 @@ local postfix_math_specs = {
       post = [[}]],
     }
   },
-  bar = {
+  ["bar"] = {
     context = {
       name = "bar",
       dscr = "bar (overline)",
@@ -462,7 +462,7 @@ local postfix_math_specs = {
       post = [[}]]
     }
   },
-  tld = {
+  ["tld"] = {
     context = {
       name = "tilde",
       priority = 500,
