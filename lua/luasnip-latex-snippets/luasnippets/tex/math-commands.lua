@@ -18,10 +18,10 @@ local autosnippet = ls.extend_decorator.apply(s, { snippetType = "autosnippet" }
 -- ]
 local tex = require("luasnip-latex-snippets.luasnippets.tex.utils.conditions")
 local auto_backslash_snippet = require("luasnip-latex-snippets.luasnippets.tex.utils.scaffolding")
-.auto_backslash_snippet
+    .auto_backslash_snippet
 local symbol_snippet = require("luasnip-latex-snippets.luasnippets.tex.utils.scaffolding").symbol_snippet
 local single_command_snippet = require("luasnip-latex-snippets.luasnippets.tex.utils.scaffolding")
-.single_command_snippet
+    .single_command_snippet
 local postfix_snippet = require("luasnip-latex-snippets.luasnippets.tex.utils.scaffolding").postfix_snippet
 
 -- fractions (parentheses case)
@@ -74,8 +74,13 @@ M = {
       { i(1), i(2), i(0) }),
     { condition = tex.in_math, show_condition = tex.in_math }),
   autosnippet(
-    { trig = "((\\d+)|(\\d*)(\\\\)?([A-Za-z]+)((\\^|_)(\\{\\d+\\}|\\d))*)\\/", name = 'fraction', dscr =
-    'auto fraction 1', trigEngine = "ecma" },
+    {
+      trig = "((\\d+)|(\\d*)(\\\\)?([A-Za-z]+)((\\^|_)(\\{\\d+\\}|\\d))*)\\/",
+      name = 'fraction',
+      dscr =
+      'auto fraction 1',
+      trigEngine = "ecma"
+    },
     fmta([[
     \frac{<>}{<>}<>
     ]],
